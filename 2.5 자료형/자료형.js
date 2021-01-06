@@ -65,5 +65,3 @@ typeof Symbol("id");    //symbol
 typeof Math;    //object
 typeof null;    //object
 typeof alert;   //object
-
-
