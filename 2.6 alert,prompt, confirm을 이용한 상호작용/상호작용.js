@@ -8,4 +8,4 @@ alert(`당신의 나이는 ${age}살 입니다.`)
 
 // confirm : 질문과 확인 및 취소 버튼이 잇는 모달창 
 let isBoss = confirm("당신이 주인인가요?");
-alert (isBoss);
+alert (isBoss); 
