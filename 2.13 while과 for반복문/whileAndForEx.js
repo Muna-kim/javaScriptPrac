@@ -64,3 +64,4 @@ do{
 }while (num <= 100 && num);
 
 // 소수 출력하기
+let num = prompt('최대수를 입력해주세요')
