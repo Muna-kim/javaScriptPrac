@@ -26,7 +26,7 @@ let age = prompt("나이는?",18);
 // }
 // welcome();  //Error
 
-let age2 = 16;
+let age = 16;
 if(age < 18){
   welcome();  // 안녕!
   function welcome(){
@@ -39,3 +39,30 @@ if(age < 18){
   }
 }
 welcome();  //Error
+
+// if문 밖에서 welcome함수 호출하기 - 함수 표현식을 사용하면 가능
+let age2 = prompt("나이는?", 18);
+let welcome;
+if(age < 18){
+  welcome = function(){
+    alert("안뇽");
+  };
+}else{
+  welcome = function(){
+    alert("안뇽하세요!");
+  };
+}
+welcome();  // 안뇽하세요
+
+// ?연산자를 사용하여 단순화
+let age3 = prompt("나이!!",18);
+let welcome = (age < 18) ?
+  function() { alert("안늉!");} :
+  function() { alert("안늉하세요!");};
+
+welcome();  // 안늉하세요
+
+// 함수 선언문과 함수 표현식중 무엇을 선택할까?
+// 함수 선언문을 사용하는게 좋다. 함수가 선언되기 전에 호출할수 있어서 자유롭고,
+// 가독성도 좋다.
+// 다만 함수 선언 방식이 적합하지 않을때 함수 표현식을 사용한다.(welcome()처럼..)
